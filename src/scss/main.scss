@@ -1,0 +1,37 @@
+@import 'config';
+@import 'homePage';
+
+body{
+    scrollbar-width: hidden;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: transparent;
+}
+
+#fp-nav.fp-right{
+    right: 3%;
+}
+
+.navigation-content{
+    position: absolute !important;
+    padding: 9px 10px !important;
+    border-radius: 50%;
+    color: $text-color;
+    background-color: transparent !important;
+    @include transition-ease;
+    &:hover{
+        background-color: transparent !important;
+    }
+}
+.navigation-link{
+    @include transition-ease;
+}
+
+.navigation-link:hover,
+.navigation-link.active{
+    @include transition-ease;
+    .navigation-content{
+        background-color: $primary-color !important;
+    }
+}
